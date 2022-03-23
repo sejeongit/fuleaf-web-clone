@@ -1,0 +1,71 @@
+
+/* variable */
+:root {
+  --border-01 : 1px solid #eaeaea;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,body {
+  font-family: 'Noto Sans KR', sans-serif;
+  font-weight:400;
+}
+
+#wrap {
+  width:100%; height:100%;
+}
+
+.header {
+  position:fixed; z-index: 1000; top:0; left:0;
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:space-between;
+  width:100%; height: 84px;
+  border-bottom: var(--border-01);
+  background-color:#fff;
+}
+
+.logo {
+  width:72px; height:20px;
+  margin-left: 50px;
+}
+
+.nav-top {
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:space-around;
+}
+
+.section {
+  width:100%; height:100%;
+  background-color: #ddd;
+}
+
+.nav-side {
+  position:fixed; z-index:100; top:50%; left:9vw;
+}
+
+.moving-arr {
+  position:absolute; z-index:10; 
+  left:50%;
+  width:40px; height:40px;
+  background-color:#fff;
+  background-image:url() 0 0 no-repeat;
+  background-size:100% 100%;
+  transform:translateX(-50%);
+  animation-duration: 1s;
+  animation-name:updown;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+@keyframes updown {
+  from {
+    bottom:60px;
+  }
+  to {
+    bottom:30px;
+  }
+}
