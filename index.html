@@ -10,6 +10,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;1,300&display=swap" rel="stylesheet">
+
 
   <!-- css -->
   <link rel="stylesheet" href="./css/reset.css">
@@ -22,35 +24,36 @@
       <div class="nav-top">
         <ul>
           <li><a href="#" class="img logo"></a></li>
-          <li><a href="#">홈</a></li>
+          <li><a href="#" class="nav-top-active">홈</a></li>
           <li><a href="#">식물찾기</a></li>
-          <li><a href="#">식물 큐레이션</a><span>coming</span></li>
+          <li class="curation"><a href="#">식물 큐레이션<span class="rounded-sq">coming</span></a></li>
         </ul>
         <ul>
-          <li><a href="#"><span>new</span><img class="img store" src="./img/store-icon.png" alt="">풀립 스토어</a></li>
+          <li class="store"><a href="#"><span class="rounded-sq">new</span><img class="img store-img" src="./img/store-icon.png" alt="">풀립 스토어</a></li>
         </ul>
       </div>
     </header>
     <section class="section">
       <nav class="nav-side">
         <ul>
-          <li><span><span class="blind">bar</span></span><a href="#">식물검색</a></li>
-          <li><span><span class="blind">bar</span></span><a href="#">식물찾기</a></li>
-          <li><span><span class="blind">bar</span></span><a href="#">매거진</a></li>
-          <li><span><span class="blind">bar</span></span><a href="#">플립</a></li>
+          <li><div class="bar-wrap"><a href="#" class="bar-link bar-active"></a></div><div class="nav-link nav-side-active"><a href="#">식물검색</a></div></li>
+          <li><div class="bar-wrap"><a href="#" class="bar-link"></a></div><div class="nav-link"><a href="#">식물찾기</a></div></li>
+          <li><div class="bar-wrap"><a href="#" class="bar-link"></a></div><div class="nav-link"><a href="#">매거진</a></div></li>
+          <li><div class="bar-wrap"><a href="#" class="bar-link"></a></div><div class="nav-link"><a href="#">플립</a></div></li>
         </ul>
       </nav>
       <div class="search-box">
-        <p>plant search</p>
+        <p class="p-serach">plant search</p>
         <div class="search-wrap">
-          <p>
+          <div class="form-wrap p">
             <span>나는</span>
-            <form action="#" method="post">
+            <form action="#" method="post" class="form">
               <input type="text" autocomplete="off"/>
             </form>
-            <span>를</span></p>
-          <p>잘 키우는 방법이</p>
-          <p>궁금하다.</p>
+            <span>를</span>
+          </div>
+          <p class="p">잘 키우는 방법이</p>
+          <p class="p">궁금하다.</p>
         </div>
       </div>
       <span class="img moving-arr"><span class="blind">img</span></span>
