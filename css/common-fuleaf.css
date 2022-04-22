@@ -1,36 +1,18 @@
-
 /* variable */
 :root {
-  --blue: #007bff;
-  --indigo: #6610f2;
-  --purple: #6f42c1;
-  --pink: #e83e8c;
-  --red: #dc3545;
-  --orange: #fd7e14;
-  --yellow: #ffc107;
-  --green: #28a745;
-  --teal: #20c997;
-  --cyan: #17a2b8;
   --white: #fff;
-  --gray: #6c757d;
-  --gray-dark: #343a40;
-  --primary: #007bff;
-  --secondary: #6c757d;
-  --success: #28a745;
-  --info: #17a2b8;
-  --warning: #ffc107;
-  --danger: #dc3545;
-  --light: #f8f9fa;
-  --dark: #343a40;
-  --breakpoint-xs: 0;
-  --breakpoint-sm: 576px;
-  --breakpoint-md: 768px;
-  --breakpoint-lg: 992px;
-  --breakpoint-xl: 1200px;
-  --font-family-sans-serif: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
-  --font-family-monospace: SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace;
+  --black: #212529;
+  --gray-01: #999;
+  --gray-02: #b4b4b4;
+  --gray-03: #ebebeb;
+  --gray-04: #d4d4d4;
+  --green: #00b564;
 
   --border-01 : 1px solid #eaeaea;
+  --border-02 : 4px solid #212529;
+
+  --noto_sans: 'Noto Sans KR', sans-serif; 
+  --montserrat: 'Montserrat', sans-serif; 
 }
 
 
@@ -40,9 +22,9 @@
 }
 
 html,body {
-  font-family: 'Noto Sans KR', sans-serif;
+  font-family: var(--noto_sans);
   font-weight:400;
-  color: var(--dark);
+  color: var(--black);
 }
 
 #wrap {
@@ -54,6 +36,7 @@ html,body {
   background-repeat: no-repeat;
   background-size:100% 100%;
 }
+
 
 /* header */
 .header {
@@ -75,7 +58,7 @@ html,body {
   margin:auto;
   font-size:15px;
   font-weight:600;
-  color:#999;
+  color:var(--gray-01);
 }
 
 .nav-top ul {
@@ -85,11 +68,18 @@ html,body {
   align-items: center;
 }
 
-.nav-top li { margin-right:40px; }
+.nav-top li {
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:space-between;
+  align-items: center; 
+  margin-right:40px;
+ }
 
 .nav-top li:first-child { margin-right: 70px;}
+.nav-top li:last-child { margin-right: 0;}
 
-
+.nav-top-active { color:var(--black); }
 
 .logo {
   display: block;
@@ -97,8 +87,34 @@ html,body {
   background-image:url(../img/mobile-gnb-logo.png);
 }
 
-.store {
+.curation{ color:var(--gray-04); }
+
+.rounded-sq {
+  display:inline-block;
+  height:20px;
+  padding:5px 0 0; 
+  margin: 3px 6px 0;
+  font-family: var(--montserrat);
+  font-size:10px;
+  color:var(--white);
+  text-align:center;
+  border-radius:9px;
+}
+
+.curation .rounded-sq { 
+  width:54px;
+  background-color:var(--gray-03); 
+}
+
+.store .rounded-sq{ 
+  width:40px;
+  background-color:var(--green); 
+}
+
+.store-img {
+  display:inline-block;
   width:20px; height:20px;
+  margin:1px 4px 0 0;
 }
 
 
@@ -111,7 +127,40 @@ html,body {
 .nav-side {
   position:fixed; z-index:100; top:50%; left:9vw;
   font-size:10px;
+  transform: translateY(-50%);
 }
+
+.nav-side li {
+  display:flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: center;
+  margin: 20px 0;
+  font-weight: 500;
+  color:var(--gray-02);
+}
+
+.bar-wrap {
+  width:26px; height:3px;
+  margin-right: 16px;
+}
+
+.bar-link {
+  display:block;
+  width:14px; height:100%;
+  background-color:var(--gray-03);
+}
+
+.bar-active {
+  width:26px;
+  background-color:var(--green);
+}
+
+.nav-side-active {
+  color: var(--green);
+  font-weight:600;
+}
+
 
 .moving-arr {
   position:absolute; z-index:10; 
@@ -133,4 +182,50 @@ html,body {
   to {
     bottom:30px;
   }
+}
+
+.search-box {
+  position:absolute;
+  top:50%; left:50%;
+  height:auto;
+  white-space:nowrap;
+  transform: translate(-50%, -50%);
+  /* transition:all 0.25s; */
+}
+
+.p-serach {
+  width:100%; height:auto;
+  margin-bottom: 44px;
+  color:var(--green);
+  font-family:var(--montserrat);
+  font-weight: 600;
+}
+
+.search-wrap {
+  width:100%; height:auto;
+  font-family: var(--noto_sans);
+  font-weight:600;
+  font-size:60px;
+  letter-spacing: -5px;
+}
+
+.search-wrap .p {
+  margin-bottom: 22px;
+}
+
+.form-wrap {
+  display:flex;
+  flex-wrap:wrap;
+  justify-content: space-between;
+  width:100%; height: auto;
+}
+
+.search-wrap form {
+  display:inline-block;
+  width:19vw; height:auto;
+}
+
+.search-wrap input {
+  width:100%; height:auto; 
+  border-bottom:var(--border-02);
 }
