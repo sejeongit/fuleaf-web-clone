@@ -42,7 +42,7 @@ window.addEventListener('scroll', (e) => {
     element.classList.remove('nav-side-active');
   }
 
-  if(sectionHeight > scroll){
+  if(0 == scroll){
     navSideBar[0].classList.add('bar-active');
     navSideLink[0].classList.add('nav-side-active');
   }else if(sectionHeight == scroll) {

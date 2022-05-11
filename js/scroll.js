@@ -39,7 +39,7 @@ window.onload = function(){
       }
 
       const body = document.querySelector('html');
-      window.scrollTo({top:moveTop, left:0, behavior:'smooth'});
+      window.scrollTo({top:moveTop, left:0, behavior:'auto'});
     });
   });
 }

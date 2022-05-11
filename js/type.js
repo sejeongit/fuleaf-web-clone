@@ -12,10 +12,10 @@
 // }
 // setInterval(typing, 400);
 
-var typeText = document.querySelector(".text");
-var textToBeTyped = "스투키";
-var textToBeTypedArr = ["스투키", "몬스테라"];
-var index = 0, isAdding = true, textToBeTypedIndex = 0;
+const typeText = document.querySelector(".text");
+const textToBeTyped = "스투키";
+const textToBeTypedArr = ["스투키", "몬스테라"];
+let index = 0, isAdding = true, textToBeTypedIndex = 0;
  
 function playAnim() {
   setTimeout(function () {
@@ -30,6 +30,7 @@ function playAnim() {
         setTimeout(function () {
           playAnim()
         }, 2000)
+
         return
       } else {
         // increment index by 1
@@ -49,7 +50,6 @@ function playAnim() {
     }
     // call itself
     playAnim()
-    return false;
   }, isAdding ? 250 : 100)
 }
 // start animation
