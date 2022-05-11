@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+  <title>Document</title>
+  <style>
+    /* body {
+        margin: 0;
+        padding: 0;
+      }
+
+    .item {
+      width: 100%;
+      height: 500px;
+
+    }
+
+    .img {
+      width:300px; height:300px;
+      opacity:0;
+    }
+
+    .item.act .img{
+      opacity:1;
+      transform:translate(0);
+    } */
+
+    * {
+      box-sizing: border-box;
+    }
+
+    .item {
+      width: 200px;
+      height: 200px;
+      margin: 50px auto;
+      padding-top: 75px;
+      background: rgba(255,85,0, .7);
+      text-align: center;
+      color: #4E4C48;
+      font-size: 1.5em;
+    }
+
+  </style>
+</head>
+<body>
+
+  <!-- <div class="item" style="background-color:white;"><img class="img" src="./img/magazine-img.jpg" alt=""></div>
+  <div class="item" style="background-color:skyblue;"><img class="img" src="./img/magazine-img.jpg" alt=""></div>
+  <div class="item" style="background-color:pink;"><img class="img" src="./img/magazine-img.jpg" alt=""></div>
+  <div class="item" style="background-color:palegoldenrod;"><img class="img" src="./img/magazine-img.jpg" alt=""></div> -->
+
+  <h1>AOS Animate On Scroll Library</h1>
+  <a href="https://michalsnik.github.io/aos/">https://michalsnik.github.io/aos/</a>
+  <h1>FADE</h1>
+  <div class="item" data-aos="fade-up" >fade-up</div>
+  <div class="item" data-aos="fade-down">fade-down</div>
+  <div class="item" data-aos="fade-right">fade-right</div>
+  <div class="item" data-aos="fade-left">fade-left</div>
+  <div class="item" data-aos="fade-up-right">fade-up-right</div>
+  <div class="item" data-aos="fade-up-left">fade-up-left</div>
+  <div class="item" data-aos="fade-down-right">fade-down-right</div>
+  <div class="item" data-aos="fade-down-left">fade-down-left</div>
+  
+  <h1>FLIP</h1>
+  <div class="item" data-aos="flip-left">flip-left</div>
+  <div class="item" data-aos="flip-right">flip-right</div>
+  <div class="item" data-aos="flip-up">flip-up</div>
+  <div class="item" data-aos="flip-down">flip-down</div>
+  
+  <h1>ZOOM</h1>
+  <div class="item" data-aos="zoom-in">zoom-in</div>
+  <div class="item" data-aos="zoom-in-up">zoom-in-up</div>
+  <div class="item" data-aos="zoom-in-down">zoom-in-down</div>
+  <div class="item" data-aos="zoom-in-left">zoom-in-left</div>
+  <div class="item" data-aos="zoom-in-right">zoom-in-right</div>
+  <div class="item" data-aos="zoom-out">zoom-out</div>
+  <div class="item" data-aos="zoom-out-up">zoom-out-up</div>
+  <div class="item" data-aos="zoom-out-down">zoom-out-down</div>
+  <div class="item" data-aos="zoom-out-right">zoom-out-right</div>
+  <div class="item" data-aos="zoom-out-left">zoom-out-left</div>
+  
+  <h1>DIFFERENT SETTINGS EXAMPLES</h1>
+  <div class="item" data-aos="fade-up" data-aos-duration="3000">fade-up</div>
+  <div class="item" data-aos="fade-down" data-aos-easing="linear" data-aos-duration="1500">fade-down linear</div>
+  <div class="item" data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-sine">fade-right</div>
+  <div class="item" data-aos="fade-left" data-aos-anchor="#example-anchor" data-aos-offset="500" data-aos-duration="500">fade-left</div>
+  <div class="item" data-aos="fade-zoom-in" data-aos-easing="ease-in-back" data-aos-delay="300" data-aos-offset="0">fade-zoom-in</div>
+  <div class="item" data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="2000">flip-left</div>
+  
+  <h1>ANCHOR PLACEMENT</h1>
+  <div class="item" data-aos="fade-up" data-aos-anchor-placement="top-bottom">fade-up top-bottom</div>
+  <div class="item" data-aos="fade-up" data-aos-anchor-placement="center-bottom">fade-up center-bottom</div>
+  <div class="item" data-aos="fade-up" data-aos-anchor-placement="bottom-bottom">fade-up bottom-bottom</div>
+  <div class="item" data-aos="fade-up" data-aos-anchor-placement="top-center">fade-up top-center</div>
+  <div class="item" data-aos="fade-up" data-aos-anchor-placement="center-center">fade-up center-center</div>
+  <div class="item" data-aos="fade-up" data-aos-anchor-placement="bottom-center">fade-up bottom-center</div>
+
+
+
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init();
+
+    // You can also pass an optional settings object
+    // below listed default settings
+    AOS.init({
+      // Global settings:
+      disable: false, // accepts following values: 'phone', 'tablet', 'mobile', boolean, expression or function
+      startEvent: 'DOMContentLoaded', // name of the event dispatched on the document, that AOS should initialize on
+      initClassName: 'aos-init', // class applied after initialization
+      animatedClassName: 'aos-animate', // class applied on animation
+      useClassNames: false, // if true, will add content of `data-aos` as classes on scroll
+      disableMutationObserver: false, // disables automatic mutations' detections (advanced)
+      debounceDelay: 50, // the delay on debounce used while resizing window (advanced)
+      throttleDelay: 99, // the delay on throttle used while scrolling the page (advanced)
+      
+
+      // Settings that can be overridden on per-element basis, by `data-aos-*` attributes:
+      offset: 120, // offset (in px) from the original trigger point
+      delay: 0, // values from 0 to 3000, with step 50ms
+      duration: 1000, // values from 0 to 3000, with step 50ms
+      easing: 'ease', // default easing for AOS animations
+      once: false, // whether animation should happen only once - while scrolling down
+      mirror: false, // whether elements should animate out while scrolling past them
+      anchorPlacement: 'top-bottom', // defines which position of the element regarding to window should trigger the animation
+
+    });
+  </script>
+  <script>
+    
+    // item 4개로 이루어진 페이지, 각 아이템의 높이는 500px
+    // 윈도우의 끝이 Item 4의 위쪽과 닿는 위치 즈음에서 item4에 fadein 효과 주기
+
+    // 윈도우의 높이
+    // const winH = window.innerHeight; // 500
+
+    // 스크롤 값
+    // window.scrollY는 수직 스크롤을 얼마나 했는지 나타낸다.
+    // 스크롤바를 움직이지 않았을 경우 0, 스크롤바를 내릴 수록 값은 커진다. 또, 문서 높이에 비해 윈도우 크기가 작을 수록 값은 더 크게 늘어난다.
+    // const scrollY = window.scrollY; // 0
+
+    // item4의 top 값
+    // getBoundingClientRect() : 해당 요소가 뷰포트로부터 얼마나 떨어져 있는지를 나타낸다.(
+    // 윈도우의 최상단과 item4의 최상단 간의 거리
+    // 상대좌표 값으로, 스크롤을 내릴수록 이 값은 줄어든다.
+    // const posFromTop = item4.getBoundingClientRect().top; // 1500
+
+    // item4의 절대좌표 값
+    // scrollY(==0) + getBoundingClientRect().top(==1500) = 절대좌표 값
+    // scrollY는 내릴수록 커지고, getBoundingClientRect()은 스크롤을 내릴수록 작아진다.
+    // 두 값은 절대좌표 내에서 서로 주거니 받거니 하면서 값이 변한다. (절대좌표는 그대로임.)
+    // const absolutePos = scrollY + posFromTop; // 1500
+
+    // item4에 fadein 효과를 주려는 지점
+    // scrollY = 1000;
+    // posFromTop = 500;
+    // posFromTop이 윈도우 높이(500)보다 작아지기 시작할 때부터 item4가 화면에서 나타난다.
+    // -> winH > posFromTop == posFromTop - winH < 0
+    // posFromTop이 스크롤에 의해 유동적으로 변하기 때문에 scrollY 값은 굳이 구하지 않아도 된다.
+
+    // const animation = () => {
+    //   let items, winH;
+
+    //   const initModule = () => {
+    //     items = document.querySelectorAll('.item');
+    //     winH = window.innerHeight;
+    //     _addEventHandlers();
+    //   }
+
+    //   const _addEventHandlers = () => {
+    //     window.addEventListener('scroll', _checkPosition);
+    //     window.addEventListener('load', _checkPosition);
+    //     window.addEventListener('resize', initModule);
+    //   };
+
+    //   const _checkPosition = () => {
+    //     for(let i = 0; i < items.length; i++){
+    //       const posFromTop = items[i].getBoundingClientRect().top;
+    //       if(winH > posFromTop){
+    //         items[i].firstChild.classList.add('active');
+    //       }
+    //     }
+    //   }
+
+    //   return {
+    //     init: initModule
+    //   }
+
+    // }
+
+    // animation().init();
+
+
+  </script>
+</body>
+</html>

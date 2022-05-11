@@ -27,10 +27,17 @@ html,body {
   font-family: var(--noto_sans);
   font-weight:400;
   color: var(--black);
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+html::-webkit-scrollbar,
+body::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera*/
 }
 
 #wrap {
   width:100%; height:100%;
+
 }
 
 .img {
@@ -160,6 +167,7 @@ html,body {
 .bar-active {
   width:26px;
   background-color:var(--green);
+  transition: 0.8s;
 }
 
 .nav-side-active {
@@ -196,7 +204,6 @@ html,body {
   height:auto;
   white-space:nowrap;
   transform: translate(-50%, -50%);
-  /* transition:all 0.25s; */
 }
 
 .p-serach {
@@ -214,6 +221,7 @@ html,body {
 }
 
 .search-wrap .p {
+  vertical-align: top;
   margin-bottom: 22px;
 }
 
@@ -231,8 +239,46 @@ html,body {
 
 .search-wrap input {
   width:100%; height:auto; 
-  border-bottom:var(--border-02);
+  font-family: var(--noto_sans);
+  font-size:5.5vw;
+  letter-spacing: -3px;
+  font-weight: 600;
+  color:var(--gray-01);
+  opacity: 0.5;
 }
+
+/* .blink {
+  animation: blink 0.8s infinite;
+  font-size: 2.5rem;
+}
+
+@keyframes blink {
+  to {
+    opacity: 0;
+  }
+} */
+
+.text::after {
+  content: "|";
+  animation: blink 1s step-end infinite;
+  color: #fff;
+}
+ 
+@keyframes blink {
+  0% {
+    opacity:1;
+  }
+  49% {
+    opacity:1;
+  }
+  50% {
+    opacity:0;
+  }
+  100% {
+    opacity:0;
+  }
+}
+
 
 
 /* second-page */
@@ -268,4 +314,101 @@ html,body {
   line-height:3.23vw;
   letter-spacing:-1.5px;
   cursor: pointer;
+}
+
+
+/* third-page */
+
+.magazine-box {
+  position:relative;
+  top: 48%;
+  display:flex;
+  flex-wrap:wrap;
+  justify-content: flex-end;
+  flex:1;
+  width:65vw;
+  height:28.57vw;
+  margin:auto;
+  transform: translateY(-50%);
+}
+
+.magazine-writing {
+  width:30vw;
+  margin-right: 4.76vw;
+}
+
+.magazine-box .title {
+  font-size:2.74vw;
+  line-height: 1.43;
+  letter-spacing: -2px;
+}
+
+.magazine-writing dl {
+  margin-top: 4.76vw;
+  font-size: 1.19vw;
+  letter-spacing: -1px;
+}
+
+.magazine-writing dt {
+  font-weight: 600;
+  line-height: 1.45;
+}
+
+.magazine-writing dd {
+  margin-top: 0.714vw;
+  line-height: 1.6;
+}
+
+.info {
+  display:flex;
+  flex-wrap:wrap;
+  align-items: center;
+  margin-top: 2.02vw;
+  font-size:1.19vw;
+  font-family: var(--montserrat);
+  font-size: 0.95vw;
+  letter-spacing: -0.7px;
+}
+
+.info em{
+  color:var(--green);
+  line-height:1.19;
+  font-weight: 500;
+  font-style:normal;
+  margin-right: 0.35vw;
+  letter-spacing:normal;
+  vertical-align:middle;
+}
+
+.date::before {
+  content: "";
+  display:inline-block;
+  width:1px; height:0.833vw;
+  margin:0 0.95vw;
+  background-color:var(--gray-01);
+  vertical-align: middle;
+}
+
+.magazine-img {
+  width:28.57vw;
+  height:100%;
+}
+
+.magazine-img a{
+  display:block;
+  width:100%; height:100%;
+  background-image: url(../img/magazine-img.jpg);
+  background-position: 50% 50%;
+  background-size:100% auto;
+}
+
+.arrow {
+  width:20px; height:20px;
+  transform: rotate(225deg);
+}
+
+.click {
+  font-size:0.833vw;
+  color: var(--white);
+  text-decoration: underline;
 }
