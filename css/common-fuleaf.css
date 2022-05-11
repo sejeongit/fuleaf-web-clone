@@ -251,7 +251,9 @@ body::-webkit-scrollbar {
 }
 
 .blink {
+  display:inline-block;
   position:relative;
+  top:8px;
   animation: blink 1s infinite;
   font-size: 3.5rem;
   color: var(--green);
@@ -387,16 +389,16 @@ body::-webkit-scrollbar {
 }
 
 .click {
-  width:20px; height:auto;
+  width:2vw; height:auto;
   padding-top: 10px;
-  margin-left: calc(28.57vw - 40px);
+  margin-left: calc(28.57vw - 3.5vw);
   font-size:1vw;
   color: var(--white);
   text-decoration: underline;
 }
 
 .arrow {
-  width:20px; height:20px;
+  width:2vw; height:2vw;
   margin-left: 3px;
   transform:rotate(225deg);
 }
