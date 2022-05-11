@@ -386,13 +386,22 @@ body::-webkit-scrollbar {
   background-size:100% auto;
 }
 
-.arrow {
-  width:20px; height:20px;
-  transform: rotate(225deg);
-}
-
 .click {
-  font-size:0.833vw;
+  width:20px; height:auto;
+  padding-top: 10px;
+  margin-left: calc(28.57vw - 40px);
+  font-size:1vw;
   color: var(--white);
   text-decoration: underline;
+}
+
+.arrow {
+  width:20px; height:20px;
+  margin-left: 3px;
+  transform:rotate(225deg);
+}
+
+.click span {
+  display:block;
+  width:100%; height:auto;
 }
