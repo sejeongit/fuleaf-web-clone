@@ -48,8 +48,7 @@ window.addEventListener('scroll', (e) => {
   }else if(sectionHeight == scroll) {
     navSideBar[1].classList.add('bar-active');
     navSideLink[1].classList.add('nav-side-active');
-  }else if(sectionHeight * 2 == scroll){
-    console.log(sectionHeight * 2);
+  }else if(sectionHeight * 2 == scroll || scroll == sectionHeight * 3){
     navSideBar[2].classList.add('bar-active');
     navSideLink[2].classList.add('nav-side-active');
   }else if(sectionHeight * 4 == scroll){
